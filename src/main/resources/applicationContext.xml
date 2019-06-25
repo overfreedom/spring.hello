@@ -7,4 +7,20 @@
 	<bean id= "helloworld" class="spring.hello.HelloWorld">
 		<property name="name" value="spring"></property>
 	</bean>
+
+	<!-- 通过构造器注入
+		 可以通过不同的参数类型来调用一个类的不同构造器
+		 type 参数类型  index 参数位置
+	 -->
+	 <bean id="contructortest1" class="spring.hello.ContructorTest">
+		 <constructor-arg value="contructortest1" type="java.lang.String" index ="0"></constructor-arg>
+		 <constructor-arg value="null" type="java.lang.String" index ="1"></constructor-arg>
+		 <constructor-arg value="100.001" type="double" index ="2"></constructor-arg>
+	 </bean>
+
+	 <bean id="contructortest2" class="spring.hello.ContructorTest">
+		 <constructor-arg value="contructortest2" type="java.lang.String" index ="0"></constructor-arg>
+		 <constructor-arg value="nil" type="java.lang.String" index ="1"></constructor-arg>
+		 <constructor-arg value="100" type="int" index ="2"></constructor-arg>
+	 </bean>
 </beans>
