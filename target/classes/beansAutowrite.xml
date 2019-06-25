@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+		
+	<bean id="address" class="spring.beans.autowrite.Address" 
+	  p:city="beijing" p:street="tiananmen"></bean>
+
+	<bean id="car" class="spring.beans.autowrite.Car"
+		p:brand="baoshijie" p:maxSpeed="250"></bean>	  
+
+	<!-- 根据属性的名字来自动装配
+	 byName 根据bean的名字 和属性的setter风格 方法名称来匹配 若匹配上则赋值 否则为空 
+	 byType 根据bean的类型和当前bean的属性类型进行自动装配
+	 -->
+	<bean id="person" class="spring.beans.autowrite.Person"
+		p:name="jack" autowire="byType"></bean>
+</beans>

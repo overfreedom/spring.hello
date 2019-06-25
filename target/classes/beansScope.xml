@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- scope默认时singleton 表示在容器在创建car时是单例的
+		 scope = prototype 表时容器初始化时不创建实例， 在getBean时 才创建实例，返回的每个bean都是新建的
+	 -->
+	<bean id="car" class="spring.beans.autowrite.Car"
+	 	scope="prototype"></bean>
+</beans>

@@ -8,6 +8,9 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/main/resources/applicationContext.xml</config>
+		<config>src/main/resources/beansAutowrite.xml</config>
+		<config>src/main/resources/beansRelation.xml</config>
+		<config>src/main/resources/beansScope.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

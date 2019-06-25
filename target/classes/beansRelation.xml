@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.1.xsd">
+		
+	<!-- bean 可以被继承 如果不配置class属性 那么abstract必须为空 -->
+	<bean id="address" abstract="true" p:city="shanghai"></bean>
+	<bean id="address1" parent="address"
+		class="spring.beans.autowrite.Address" p:street="ludingqiao"></bean>
+
+	<bean id="car" class="spring.beans.autowrite.Car" p:brand="benchi" p:maxSpeed="888"></bean>
+
+	<!-- bean 依赖于某个bean depends-on="car" 如果这个xml里面没有配置到car bean 那么编译的时候就会报错 -->
+	<bean id= "person" class="spring.beans.autowrite.Person" depends-on="car" p:address-ref="address1" p:name="jack cheng"></bean>	
+		
+</beans>
