@@ -23,6 +23,9 @@ public class ContructorTest {
 		this.refertime = refertime;
 	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	@Override
 	public String toString() {

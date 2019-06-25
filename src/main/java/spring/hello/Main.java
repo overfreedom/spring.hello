@@ -15,10 +15,13 @@ public class Main {
 		//2. 从IOC容器对象中获取实例
 //		HelloWorld hw = (HelloWorld)ctx.getBean("helloworld");
 //		hw.Hello();
-		ContructorTest ctt = (ContructorTest)ctx.getBean("contructortest1");
-		System.out.println(ctt);
-		ctt = (ContructorTest)ctx.getBean("contructortest2");
-		System.out.println(ctt);
+//		ContructorTest ctt = (ContructorTest)ctx.getBean("contructortest1");
+//		System.out.println(ctt);
+//		ctt = (ContructorTest)ctx.getBean("contructortest2");
+//		System.out.println(ctt);
+
+		ClassRefTest crt = (ClassRefTest) ctx.getBean("classreftest");
+		System.out.println(crt);
 	}
 
 }
