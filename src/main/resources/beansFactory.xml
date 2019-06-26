@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 通过静态工厂方法来配置car实例  并不是配置静态工厂类实例  -->
+	<!-- 
+		class 指向静态工厂方法全类名
+		factory—method 指定静态工厂方类的静态方法  获取一个Car实例
+		如果该方法有参数，则在<constructor-arg>中指定
+	 -->
+	<bean id="car1" class="spring.beans.factory.StaticCarFactory" factory-method="getCar">
+		<constructor-arg value="baoma"></constructor-arg>
+	</bean>
+
+	<!-- 通过工厂实例来获取实例 -->
+	<!-- 先配置一个实例工厂 -->
+	<bean id="carfactory" class="spring.beans.factory.InstanctCarFactory"></bean>
+	<!-- 再指定用哪个工厂实例 和工厂实例的获取Car方法 -->
+	<bean id="car2" factory-bean="carfactory" factory-method="getCar">
+		<constructor-arg value="benchi"></constructor-arg>
+	</bean>	
+</beans>

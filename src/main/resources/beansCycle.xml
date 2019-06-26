@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car" class="spring.beans.cylce.Car" >
+		<property name="brand" value="baoma"></property>
+	</bean>
+
+	<!-- 配置bean后置处理器 -->
+	<!-- 要求实现BeanPostProcessor接口
+		并提供public Object postProcessBeforeInitialization(Object bean, String beanName)  
+		public Object postProcessAfterInitialization(Object bean, String beanName)
+		的具体实现
+		spring 会自动识别一个class是否为后置处理器		
+	 -->
+	<bean class="spring.beans.cylce.MybeanPostProcessor"></bean>	
+</beans>
