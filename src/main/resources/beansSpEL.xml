@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="car" class="spring.beans.spel.Car">
+	<!-- spel字面量赋值 -->
+	<property name="brand" value="#{'baoma'}"></property>
+	<!-- spel引用静态类属性或方法 -->
+	<property name="typePerimeter" value="#{T(java.lang.Math).PI * 80}"></property>
+	<property name="maxSpeed" value="180"></property>	
+</bean>
+	
+<bean id="person" class="spring.beans.spel.Person">
+	<!-- 使用运算符 -->
+	<property name="info" value="#{car.maxSpeed > 100 ? '普通人':'赛车手'}"></property>
+	<!-- 引用bean对象 -->
+	<property name="car" value="#{car}"></property>
+	<property name="name" value="jack"></property>	
+</bean>
+
+
+</beans>

@@ -12,6 +12,7 @@
 		<config>src/main/resources/beansRelation.xml</config>
 		<config>src/main/resources/beansScope.xml</config>
 		<config>src/main/resources/beansDBProperties.xml</config>
+		<config>src/main/resources/beansSpEL.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
