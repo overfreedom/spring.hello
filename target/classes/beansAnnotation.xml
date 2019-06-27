@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<!-- 指定IOC 容器扫描的包 -->
+	<!-- 可以通过resource-pattern 指定资源文件其它将被过滤   
+	<context:component-scan base-package="spring.beans.annotation"
+		resource-pattern="respository/*.class"></context:component-scan>
+	-->
+	<context:component-scan base-package="spring.beans.annotation"
+	></context:component-scan>
+
+	<!--
+		context:exclude-filter 指定排除的资源文件
+		context:include-filter 指定包含的资源文件  要配合context:include-filter =false 使用
+	  -->			
+	  <!-- 
+	<context:component-scan base-package="spring.beans.annotation"
+		use-default-filters="false"	>
+	 <context:exclude-filter type="annotation" expression="spring.beans.annotation.respository"/> 
+
+		<context:include-filter type="annotation" expression="spring.beans.annotation.controller"/>
+	</context:component-scan>
+	 -->
+		
+
+</beans>

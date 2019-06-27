@@ -16,6 +16,7 @@
 		<config>src/main/resources/beansCycle.xml</config>
 		<config>src/main/resources/beansFactory.xml</config>
 		<config>src/main/resources/beansFactoryBean.xml</config>
+		<config>src/main/resources/beansAnnotation.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
