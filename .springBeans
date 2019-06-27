@@ -15,6 +15,7 @@
 		<config>src/main/resources/beansSpEL.xml</config>
 		<config>src/main/resources/beansCycle.xml</config>
 		<config>src/main/resources/beansFactory.xml</config>
+		<config>src/main/resources/beansFactoryBean.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
