@@ -17,6 +17,8 @@
 		<config>src/main/resources/beansFactory.xml</config>
 		<config>src/main/resources/beansFactoryBean.xml</config>
 		<config>src/main/resources/beansAnnotation.xml</config>
+		<config>src/main/resources/beansGenericDI.xml</config>
+		<config>src/main/resources/AOPImpl.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
