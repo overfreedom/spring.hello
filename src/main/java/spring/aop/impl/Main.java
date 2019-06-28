@@ -10,6 +10,7 @@ public class Main {
 		ArithmeticCalculate arithmeticCalculate = (ArithmeticCalculate) ctx.getBean("arithmeticCalculate");
 		System.out.println(arithmeticCalculate.add(1, 2));
 		System.out.println(arithmeticCalculate.mul(4, 8));
+		System.out.println(arithmeticCalculate.div(2, 0));
 	}
 
 }
